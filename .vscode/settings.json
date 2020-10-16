@@ -1,0 +1,47 @@
+{
+  "go.useLanguageServer": true,
+  "go.toolsEnvVars": {
+    "GO111MODULE": "on"
+  },
+  "gopls": {
+    // Add parameter placeholders when completing a function.
+    "usePlaceholders": true,
+    // If true, enable additional analyses with staticcheck.
+    // Warning: This will significantly increase memory usage.
+    "staticcheck": false,
+  },
+  "[go]": {
+    "editor.snippetSuggestions": "none",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+      "source.fixAll": true,
+    },
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false
+  },
+  "[go.mod]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+    },
+  },
+  "go.inferGopath": false,
+  // "go.formatTool": "gofmt",
+  "go.formatTool": "goimports",
+  "go.formatFlags": [
+    "-s"
+  ],
+  // "go.lintTool": "golangci-lint",
+  "go.lintTool": "golint",
+  // "go.lintOnSave": "package",
+  // "go.vetOnSave": "package",
+  // "go.buildOnSave": "package",
+  "go.testOnSave": false,
+  "go.gocodeAutoBuild": true,
+  "go.installDependenciesWhenBuilding": true,
+  "go.testTimeout": "5000",
+  "go.lintOnSave": "file",
+}
